@@ -25,9 +25,13 @@
 /Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/staticwebassets.build.json
 /Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/staticwebassets.development.json
 /Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/scopedcss/bundle/HPlusSport.API.styles.css
-/Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/HPlusSport.API.csproj.CopyComplete
 /Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/HPlusSport.API.dll
 /Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/refint/HPlusSport.API.dll
 /Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/HPlusSport.API.pdb
 /Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/HPlusSport.API.genruntimeconfig.cache
 /Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/ref/HPlusSport.API.dll
+/Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.InMemory.dll
+/Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/HPlusSport.API.sourcelink.json
+/Users/winifredrex/Desktop/HPlusSport.API/HPlusSport.API/obj/Debug/net7.0/HPlusSpo.33A852E7.Up2Date
