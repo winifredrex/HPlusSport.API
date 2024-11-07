@@ -1,6 +1,7 @@
 using HPlusSport.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HPlusSport.API.Controllers
 {
@@ -18,20 +19,32 @@ namespace HPlusSport.API.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Product> GetAllProducts()
+        public async Task<ActionResult> GetAllProducts()
         {
-            return _context.Products.ToArray();
+            return Ok(await _context.Products.ToArrayAsync());
         }
         [HttpGet("{id}")]
-        public ActionResult GetProduct(int id)
+        public async Task<ActionResult> GetProduct(int id)
         {
-            var product = _context.Products.Find(id);
+            var product = await _context.Products.FindAsync(id);
             if (product == null)
             {
                 return NotFound();
             }
             return Ok(product);
-    }
+        }
+        [HttpPost]
+        public async Task<ActionResult<Product>>PostProduct(Product product)
+        {
+            _context.Products.Add(product);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction(
+                "Get Product",
+                new { id = product.Id },
+                product);
+        }
+        
 
     }
 }
