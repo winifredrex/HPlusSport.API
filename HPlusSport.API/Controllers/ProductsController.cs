@@ -23,16 +23,36 @@ namespace HPlusSport.API.Controllers
         {
             return Ok(await _context.Products.ToArrayAsync());
         }
-        [HttpGet("{id}")]
-        public async Task<ActionResult> GetProduct(int id)
+        
+        [HttpPut("{id}")]
+        public async Task<ActionResult> PutProduct(int id, Product product)
         {
-            var product = await _context.Products.FindAsync(id);
-            if (product == null)
+            if (id != product.Id)
             {
-                return NotFound();
+                return BadRequest();
             }
-            return Ok(product);
+
+            _context.Entry(product).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!_context.Products.Any(p => p.Id == id))
+                {
+                    return NotFound();
+                } 
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
+
         [HttpPost]
         public async Task<ActionResult<Product>>PostProduct(Product product)
         {
